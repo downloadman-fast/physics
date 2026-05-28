@@ -1,0 +1,158 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: #080b11;
+    overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+}
+
+/* Neon Walls */
+.wall {
+    position: absolute;
+    z-index: 5;
+}
+
+.wall-top {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: #00fff0;
+    box-shadow: 0 0 15px #00fff0;
+}
+
+.wall-bottom {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: #00a8ff;
+    box-shadow: 0 0 15px #00a8ff;
+}
+
+.wall-left {
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 100%;
+    background: #00ffc4;
+    box-shadow: 0 0 15px #00ffc4;
+}
+
+.wall-right {
+    top: 0;
+    right: 0;
+    width: 6px;
+    height: 100%;
+    background: #0066ff;
+    box-shadow: 0 0 15px #0066ff;
+}
+
+/* Stats Dashboard */
+#dashboard {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    background: rgba(10, 15, 26, 0.9);
+    color: #fff;
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 255, 240, 0.3);
+    box-shadow: 0 0 20px rgba(0, 255, 240, 0.1);
+    min-width: 280px;
+    z-index: 10;
+    backdrop-filter: blur(8px);
+}
+
+#dashboard h3 {
+    margin: 0 0 12px 0;
+    color: #00fff0;
+    font-size: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+.data-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+.data-value {
+    font-family: monospace;
+    font-weight: bold;
+}
+
+.c-top {
+    color: #00fff0;
+}
+
+.c-bottom {
+    color: #00a8ff;
+}
+
+.c-left {
+    color: #00ffc4;
+}
+
+.c-right {
+    color: #0066ff;
+}
+
+#valPos {
+    color: #ffffff;
+}
+
+#valLastWall {
+    font-weight: bold;
+}
+
+.highlight {
+    color: #ffff00;
+}
+
+/* The Ball */
+.ball {
+    width: 26px;
+    height: 26px;
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    box-shadow: 0 0 15px #fff;
+    z-index: 6;
+    opacity: 1;
+    transition: background 0.1s, box-shadow 0.1s;
+}
+
+/* Impact Ripple Effect */
+.impact-effect {
+    position: absolute;
+    border: 3px solid;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    animation: ripple 0.4s ease-out forwards;
+    z-index: 4;
+}
+
+@keyframes ripple {
+    0% {
+        width: 0px;
+        height: 0px;
+        opacity: 1;
+    }
+
+    100% {
+        width: 120px;
+        height: 120px;
+        opacity: 0;
+    }
+}

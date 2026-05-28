@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gravity Simulation - Slow & Touch Top Edition</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="wall wall-top"></div>
+    <div class="wall wall-bottom"></div>
+    <div class="wall wall-left"></div>
+    <div class="wall wall-right"></div>
+
+    <div id="dashboard">
+        <h3>Telemetry & Collision Radar</h3>
+        <div class="data-row"><span>Position (X , Y):</span> <span id="valPos">0 , 0</span></div>
+        <div class="data-row"><span>Total Bounces:</span> <span id="valTotalBounces" class="highlight">0 / 10</span>
+        </div>
+        <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.1); margin: 8px 0;">
+
+        <div class="data-row"><span>Top Wall (Cyan):</span> <span id="countTop" class="data-value c-top">0</span></div>
+        <div class="data-row"><span>Bottom Wall (Light Blue):</span> <span id="countBottom"
+                class="data-value c-bottom">0</span></div>
+        <div class="data-row"><span>Left Wall (Neon Teal):</span> <span id="countLeft"
+                class="data-value c-left">0</span></div>
+        <div class="data-row"><span>Right Wall (Dark Blue):</span> <span id="countRight"
+                class="data-value c-right">0</span></div>
+        <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.1); margin: 8px 0;">
+        <div class="data-row"><span>Last Impact:</span> <span id="valLastWall" style="color: #aaa;">None</span></div>
+    </div>
+
+    <div class="ball"></div>
+    <script src="script.js"></script>
+</body>
+
+</html>
