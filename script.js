@@ -35,6 +35,8 @@ function handleWallHit(wallKey, impactX, impactY) {
     if (isEnding) return;
 
     const wall = wallStats[wallKey];
+    const audio = new Audio("/audio.mp3");
+    audio.play();
 
     wall.hits++;
     wall.el.textContent = wall.hits;
