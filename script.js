@@ -73,7 +73,8 @@ function createImpact(posX, posY, color) {
 }
 
 // Main Engine Loop (60 FPS)
-const simulationLoop = setInterval(() => {
+function playBall(){
+    const simulationLoop = setInterval(() => {
     const ballRect = ball.getBoundingClientRect();
     const windowWidth = window.innerWidth;
     const windowHeight = window.innerHeight;
@@ -139,3 +140,4 @@ const simulationLoop = setInterval(() => {
     valPosEl.textContent = `${Math.round(x)}px , ${Math.round(y)}px`;
 
 }, 1000 / 60);
+};
