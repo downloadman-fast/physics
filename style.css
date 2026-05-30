@@ -16,12 +16,13 @@ body {
     width: 100vw;
     height: 100vh;
     position: fixed;
-    background: red;
     z-index: 100;
     display: flex;
+    box-shadow: inset 0px 0 193px 0 blue;
     align-items: center;
     justify-content: center;
     font-size: 4rem;
+    color: gold;
 }
 /* Neon Walls */
 .wall {
