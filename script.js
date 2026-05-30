@@ -75,8 +75,8 @@ function play(){
     const elementTxt = document.createElement("span");
     elementTxt.textContent = "play";
     elementTxt.className = "playTxt";
-    document.body.appindCild("elementTxt");
-    elementTxt.click = ()=>{
+    document.body.appendChild(elementTxt);
+    elementTxt.onclick = ()=>{
         elementTxt.remove();
         playBall();
     };
