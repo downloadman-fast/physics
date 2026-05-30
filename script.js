@@ -71,8 +71,15 @@ function createImpact(posX, posY, color) {
 
     setTimeout(() => effect.remove(), 400);
 }
-window.onload = ()=>{
-    playBall();
+function play(){
+    const elementTxt = document.createElement("span");
+    elementTxt.textContent = "play";
+    elementTxt.className = "playTxt";
+    document.body.appindCild("elementTxt");
+    elementTxt.click = ()=>{
+        elementTxt.remove();
+        playBall();
+    };
 }
 // Main Engine Loop (60 FPS)
 function playBall(){
