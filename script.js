@@ -71,7 +71,9 @@ function createImpact(posX, posY, color) {
 
     setTimeout(() => effect.remove(), 400);
 }
-
+window.onload = ()=>{
+    playBall();
+}
 // Main Engine Loop (60 FPS)
 function playBall(){
     const simulationLoop = setInterval(() => {
