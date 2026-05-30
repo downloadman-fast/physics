@@ -80,7 +80,8 @@ function play(){
         elementTxt.remove();
         playBall();
     };
-}
+};
+play();
 // Main Engine Loop (60 FPS)
 function playBall(){
     const simulationLoop = setInterval(() => {
